@@ -17,20 +17,12 @@
 	header{
 		background-color: #ffffff;
 		border-bottom: solid 2px #cccccc;
-		min-height: 75px;	
+		min-height: 75px;
 		position: relative;
 	}
 
 	.headerContent{
-		position: absolute;
-		display: flex;
-		display: -webkit-flex; /* For Safari */
-	  justify-content: space-between;
-	  vertical-align: bottom;
-	  width: 960px;
-	  bottom: 0px;
-		left: 0;
-		right: 0;
+	  	max-width: 960px;
 		margin: auto;
 		font-weight: bolder;
 	}
@@ -68,9 +60,9 @@
 	}
 
 	main{
-		width: 960px;
+		max-width: 960px;
 		margin: 0 auto;
-	  flex: 1 0 auto;
+		flex: 1 0 auto;
 	}
 
 	article{
@@ -100,7 +92,7 @@
 		float: right;
 		width:270px;
 		padding: 0px 0px 25px 0px;
-		margin-top: 50px;
+		margin: 50px 0 0 36px;
 		background-color: #ffffff;
 		border: solid 1px #888;
 		text-align: center;
@@ -137,7 +129,6 @@
 		width:200px;
 		height: 200px;
 		display: block;
-		float: left;
 		margin: 20px 20px 5px 35px;
 	}
 
@@ -173,7 +164,7 @@
 /* Portfolio Page */
 
 	figure{
-		float: left;
+		display: inline-block;
 		margin-left: 7%;
 		margin-right: 7%;
 		padding-top: 50px;
@@ -193,3 +184,70 @@
 		margin-top: -60px;
 		z-index: 2;
 	}
+
+	/*--------- Md and smaller screens ---------*/
+@media screen and (max-width: 991px){
+
+	.connect{
+		margin-top:30px;
+	}
+
+	article{
+		float: none;
+	}
+
+	aside{
+		float: none;
+		width: 100%;
+		margin: 50px 0 0 0;
+		text-align: left
+	}
+
+	.headerContent{
+		width: 650px;
+	}
+}
+
+/*--------- Md and Lg screens ---------*/
+@media screen and (min-width: 992px){
+	.connect{
+		text-align: center;
+	}
+}
+
+/*--------- Sm screens ---------*/
+@media screen and (min-width: 768px){
+
+	#profile-pic{
+		float: left;
+
+	}
+}
+
+/*--------- Xs screens ---------*/
+@media screen and (max-width: 767px){
+	
+	.name{
+		float: none;
+	}
+
+	nav{
+		float: none;
+		width: 100%;
+	}
+
+	nav a{
+		width: 33.23%;
+		padding: 0px;
+	}
+
+	#profile-pic{
+		float: none;
+	}
+
+	figure{
+		display: block;
+		width: 200px;
+		margin: 0 auto;
+	}
+}
